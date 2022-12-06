@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hopalong_Rozhin.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace Hopalong_Rozhin
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new AgentPage());
         }
 
         private void btnFaq_Click(object sender, RoutedEventArgs e)
