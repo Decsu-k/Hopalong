@@ -29,7 +29,7 @@
 
             <Setter Property="FontSize" Value="17"/>
             <Setter Property="Height" Value="35"/>
-            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Margin" Value="30"/>
         </Style>
         
         <!--Style for nodefault redactBtn-->
@@ -37,7 +37,17 @@
             <Setter Property="Width" Value="200"/>
             <Setter Property="FontFamily" Value="Tahoma"/>
             <Setter Property="Foreground" Value="White"/>
-            <Setter Property="Background" Value="#FFFF4A6D"/>
+            <Setter Property="Background" Value="#43DCFE"/>
+            <Setter Property="FontSize" Value="17"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Margin" Value="160 0 0 5"/>
+        </Style>
+        <!--Style for default Button-->
+        <Style TargetType="Button" x:Key="DeleteBtn">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="FontFamily" Value="Tahoma"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#43DCFE"/>
             <Setter Property="FontSize" Value="17"/>
             <Setter Property="Height" Value="35"/>
             <Setter Property="Margin" Value="160 0 0 5"/>

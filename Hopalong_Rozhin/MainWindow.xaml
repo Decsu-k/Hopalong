@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hopalong_Rozhin"
         mc:Ignorable="d"
-        Title="Попрыгунчик" Height="450" Width="800">
+        Title="Попрыгунчик" Height="500" Width="850" IsVisibleChanged="Window_IsVisibleChanged">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40*"></RowDefinition>
@@ -14,17 +14,17 @@
         <StackPanel Grid.Row="0" Background="#F9969E" Orientation="Horizontal">
             <Image Source="Resources\Попрыженок.png" Margin="5"></Image>
         </StackPanel>
-    <Button x:Name="btnBack_Click"
+        <Button Name="btnBack" Click="btnBack_Click"
             Width="150" Height="30" FontSize="17"
             Foreground="#FFFFFF" Background="#43DCFE"
             Margin="600 0 0 0" FontFamily="Tahoma">Назад</Button>
-    <Button x:Name="btnFaq" Click="btnFaq_Click"
-            Width="150" Height="30" FontSize="17"
+        <Button Name="BtnAdd" Click="BtnAdd_Click"
+                Width="150" Height="30" FontSize="17"
             Foreground="#FFFFFF" Background="#43DCFE"
-            Margin="250 0 0 0" FontFamily="Tahoma">FAQ</Button>
+            Margin="200 0 0 0" FontFamily="Tahoma">Добавить</Button>
         <StackPanel Grid.Row="1" VerticalAlignment="Center">
             <Image Source="Resources\Попрыженок.png" Margin="5" Width="300" Opacity=".1"></Image>
         </StackPanel>
-    <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"></Frame>
+    <Frame ContentRendered="MainFrame_ContentRendered" Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"></Frame>
     </Grid>
 </Window>

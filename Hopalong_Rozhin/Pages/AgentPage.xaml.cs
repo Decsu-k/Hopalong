@@ -62,5 +62,31 @@ namespace Hopalong_Rozhin.Pages
         {
             UpdateAgent();
         }
+
+        private void BtnEdit_Click_1(object sender, RoutedEventArgs e)
+        {
+
+            Manager.MainFrame.Navigate(new AddEditPage((sender as Button).DataContext as Agent));
+        }
+
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            var agentForRemoving = LViewAgent.SelectedItems.Cast<Agent>().ToList();
+
+            if (MessageBox.Show($"Вы точно хотите удалить следующие {agentForRemoving.Count()} элементов?", "Внимание",
+                MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    tren2_RozhinEntities.GetContext().Agent.RemoveRange(agentForRemoving);
+                    tren2_RozhinEntities.GetContext().SaveChanges();
+                    MessageBox.Show("Данные удалены!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
+        }
     }
 }

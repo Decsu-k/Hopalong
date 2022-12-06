@@ -31,7 +31,8 @@
                     <Grid Margin="20" Width="400">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="70"></RowDefinition>
-                            <RowDefinition Height="310"></RowDefinition>
+                            <RowDefinition Height="50"></RowDefinition>
+                            <RowDefinition Height="50"></RowDefinition>
                             <RowDefinition Height="auto"></RowDefinition>
                             <RowDefinition Height="auto"></RowDefinition>
                         </Grid.RowDefinitions>
@@ -45,9 +46,9 @@
                             </Image.Source>
                         </Image>
                         <TextBlock Text="{Binding NameCompany}"
-                                   Style="{StaticResource titleTxtb}"></TextBlock>
+                                   Style="{StaticResource titleTxtb}" Grid.Row="2"></TextBlock>
                         <TextBlock Text="{Binding Phone}" 
-                                   Style="{StaticResource prdctTxtb}"></TextBlock>
+                                   Style="{StaticResource prdctTxtb}" Grid.Row="3"></TextBlock>
                         <TextBlock Text="{Binding PriorityInDelivery}" HorizontalAlignment="Left"></TextBlock>
                         <TextBlock
                                         Name="StringImage"
@@ -56,8 +57,10 @@
                                         />
                         <Image Source="{Binding Text, ElementName=StringImage}"
                                            Style="{StaticResource ImgSource}"/>
-                        <Button Content="TESTMEGA" 
-                                  Style="{StaticResource redactBtn}"></Button>
+                        <Button Content="Редактировать" Name="BtnEdit" Click="BtnEdit_Click_1"
+                                  Style="{StaticResource redactBtn}" Grid.Row="3"></Button>
+                        <Button Content="Удалить" Name="BtnDelete" Click="BtnDelete_Click"
+                                  Style="{StaticResource DeleteBtn}" Grid.Row="4"></Button>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
