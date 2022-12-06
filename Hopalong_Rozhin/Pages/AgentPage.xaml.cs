@@ -24,8 +24,43 @@ namespace Hopalong_Rozhin.Pages
         public AgentPage()
         {
             InitializeComponent();
+
+            var allType = tren2_RozhinEntities.GetContext().Agent.ToList();
+            allType.Insert(0, new Agent
+            {
+                NameCompany = "Все агенты"
+            });
+            ComboType.ItemsSource = allType;
+
+            ComboType.SelectedIndex = 0;
+
+            UpdateAgent();
+        }
+
+        private void UpdateAgent()
+        {
             var currentAgent = tren2_RozhinEntities.GetContext().Agent.ToList();
-            LViewAgent.ItemsSource = currentAgent;
+
+            //if (ComboType.SelectedIndex > 0)
+            //    currentAgent = currentAgent.Where(p => p.TypeAgent.Contains(ComboType.SelectedItem as Agent)).ToList();
+
+            currentAgent = currentAgent.Where(p => p.NameCompany.ToLower().Contains(TBoxSearch.Text.ToLower())).ToList();
+
+            //if (CheckActual.IsChecked.Value)
+            //    currentTours = currentToues.Where(p => IsActual).ToList();
+
+            LViewAgent.ItemsSource = currentAgent.OrderBy(p => p.NameCompany).ToList();
+
+        }
+
+        private void TBoxSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            UpdateAgent();
+        }
+
+        private void ComboType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            UpdateAgent();
         }
     }
 }
