@@ -28,15 +28,8 @@
         <ListView Grid.Row="1" Name="LViewAgent">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Margin="20" Width="400">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="70"></RowDefinition>
-                            <RowDefinition Height="50"></RowDefinition>
-                            <RowDefinition Height="50"></RowDefinition>
-                            <RowDefinition Height="auto"></RowDefinition>
-                            <RowDefinition Height="auto"></RowDefinition>
-                        </Grid.RowDefinitions>
-                        <Image Width="400" Grid.Row="1" Stretch="UniformToFill" HorizontalAlignment="Center">
+                    <Grid Margin="20" Width="800">
+                        <Image Width="400" Stretch="UniformToFill" HorizontalAlignment="Center">
                             <Image.Source>
                                 <Binding Path="ImagePreview">
                                     <Binding.TargetNullValue>
@@ -45,11 +38,12 @@
                                 </Binding>
                             </Image.Source>
                         </Image>
-                        <TextBlock Text="{Binding NameCompany}"
-                                   Style="{StaticResource titleTxtb}" Grid.Row="2"></TextBlock>
-                        <TextBlock Text="{Binding Phone}" 
-                                   Style="{StaticResource prdctTxtb}" Grid.Row="3"></TextBlock>
-                        <TextBlock Text="{Binding PriorityInDelivery}" HorizontalAlignment="Left"></TextBlock>
+                        <TextBlock Text="{Binding NameCompany, StringFormat= {} Компания: {0}}"
+                                   Style="{StaticResource titleTxtb}"></TextBlock>
+                        <TextBlock Text="{Binding Phone, StringFormat= {} Телефон: {0}}" 
+                                   Style="{StaticResource prdctTxtb}"></TextBlock>
+                        <TextBlock Text="{Binding PriorityInDelivery, StringFormat= {} Приоритет продажи: {0}}" HorizontalAlignment="Left"
+                                   Style="{StaticResource priorTxtb}"></TextBlock>
                         <TextBlock
                                         Name="StringImage"
                                         Visibility="Hidden"
@@ -58,9 +52,9 @@
                         <Image Source="{Binding Text, ElementName=StringImage}"
                                            Style="{StaticResource ImgSource}"/>
                         <Button Content="Редактировать" Name="BtnEdit" Click="BtnEdit_Click_1"
-                                  Style="{StaticResource redactBtn}" Grid.Row="3"></Button>
+                                  Style="{StaticResource redactBtn}"></Button>
                         <Button Content="Удалить" Name="BtnDelete" Click="BtnDelete_Click"
-                                  Style="{StaticResource DeleteBtn}" Grid.Row="4"></Button>
+                                  Style="{StaticResource DeleteBtn}"></Button>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

@@ -17,11 +17,12 @@
         <Button Name="btnBack" Click="btnBack_Click"
             Width="150" Height="30" FontSize="17"
             Foreground="#FFFFFF" Background="#43DCFE"
-            Margin="600 0 0 0" FontFamily="Tahoma">Назад</Button>
+            Margin="200 0 0 0" FontFamily="Tahoma" Grid.Row="0"
+                >Назад</Button>
         <Button Name="BtnAdd" Click="BtnAdd_Click"
                 Width="150" Height="30" FontSize="17"
             Foreground="#FFFFFF" Background="#43DCFE"
-            Margin="200 0 0 0" FontFamily="Tahoma">Добавить</Button>
+            Margin="600 0 0 0" FontFamily="Tahoma" Grid.Row="0">Добавить</Button>
         <StackPanel Grid.Row="1" VerticalAlignment="Center">
             <Image Source="Resources\Попрыженок.png" Margin="5" Width="300" Opacity=".1"></Image>
         </StackPanel>

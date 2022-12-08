@@ -28,17 +28,17 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         
-        <TextBlock Text="Фамилия" Grid.Row="0"></TextBlock>
-        <TextBlock Text="Имя" Grid.Row="1"></TextBlock>
-        <TextBlock Text="Отчество" Grid.Row="2"></TextBlock>
-        <TextBlock Text="Компания" Grid.Row="3"></TextBlock>
-        <TextBlock Text="Адрес" Grid.Row="4"></TextBlock>
-        <TextBlock Text="ИНН" Grid.Row="5"></TextBlock>
-        <TextBlock Text="КПП" Grid.Row="6"></TextBlock>
-        <TextBlock Text="Почта" Grid.Row="7"></TextBlock>
-        <TextBlock Text="Телефон" Grid.Row="8"></TextBlock>
-        <TextBlock Text="Изображение" Grid.Row="9"></TextBlock>
-        <TextBlock Text="Приоритет" Grid.Row="10"></TextBlock>
+        <TextBlock Text="Фамилия" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="17"></TextBlock>
+        <TextBlock Text="Имя" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="17"></TextBlock>
+        <TextBlock Text="Отчество" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="17"></TextBlock>
+        <TextBlock Text="Компания" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="17"></TextBlock>
+        <TextBlock Text="Адрес" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="17"></TextBlock>
+        <TextBlock Text="ИНН" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="17"></TextBlock>
+        <TextBlock Text="КПП" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="17"></TextBlock>
+        <TextBlock Text="Почта" Grid.Row="7" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="17"></TextBlock>
+        <TextBlock Text="Телефон" Grid.Row="8" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="17"></TextBlock>
+        <TextBlock Text="Изображение" Grid.Row="9" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="17"></TextBlock>
+        <TextBlock Text="Приоритет" Grid.Row="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="17"></TextBlock>
 
         <TextBox Text="{Binding FirstNane}" Grid.Row="0" Grid.Column="1" Width="500" MaxLength="100"></TextBox>
         <TextBox Text="{Binding LastName}" Grid.Row="1" Grid.Column="1" Width="500" MaxLength="100"></TextBox>
@@ -54,6 +54,7 @@
 
         <Button Content="Сохранить" Grid.ColumnSpan="2" Grid.Row="11" 
                 Width="200" Background="#43DCFE"
-                Name="BtnSave" Click="BtnSave_Click"></Button>
+                Name="BtnSave" Click="BtnSave_Click"
+                VerticalAlignment="Center" FontSize="17"></Button>
     </Grid>
 </Page>
